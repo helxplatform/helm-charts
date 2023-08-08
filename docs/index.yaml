@@ -1,5 +1,36 @@
 apiVersion: v1
 entries:
+  airflow:
+  - apiVersion: v2
+    appVersion: 2.2.5
+    created: "2023-08-08T14:34:11.972917154Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.6.4
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.7
+    description: Airflow Helm Chart (User Community) - the standard way to deploy
+      Apache Airflow on Kubernetes with Helm
+    digest: fd2c0cba99633b6e80a24b9b5886e3088b06eab8fb4d7ed4bbd9afcb3d218c09
+    home: https://github.com/airflow-helm/charts/tree/main/charts/airflow
+    icon: https://airflow.apache.org/_images/pin_large.png
+    keywords:
+    - airflow
+    - dag
+    - workflow
+    maintainers:
+    - name: thesuperzapper
+      url: https://github.com/thesuperzapper
+    name: airflow
+    sources:
+    - https://github.com/airflow-helm/charts/tree/main/charts/airflow
+    urls:
+    - https://helxplatform.github.io/helm-charts/charts/airflow-8.6.1.tgz
+    version: 8.6.1
   ambassador:
   - apiVersion: v1
     appVersion: 1.14.4
@@ -409,6 +440,23 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/dev-shell-0.1.0.tgz
     version: 0.1.0
+  elasticsearch:
+  - apiVersion: v1
+    appVersion: 7.16.3
+    created: "2023-08-08T14:34:11.975178678Z"
+    description: Official Elastic helm chart for Elasticsearch
+    digest: 3ce99330b34a754f27737701afaf7893d6f7db7207450a69e7c05818b2b2844b
+    home: https://github.com/elastic/helm-charts
+    icon: https://helm.elastic.co/icons/elasticsearch.png
+    maintainers:
+    - email: helm-charts@elastic.co
+      name: Elastic
+    name: elasticsearch
+    sources:
+    - https://github.com/elastic/elasticsearch
+    urls:
+    - https://helxplatform.github.io/helm-charts/charts/elasticsearch-7.16.3.tgz
+    version: 7.16.3
   grader-api:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -2140,16 +2188,49 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/pod-reaper-0.2.0.tgz
     version: 0.2.0
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 7.0.4
+    created: "2023-08-08T14:34:11.989373063Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: 0051a4727f6cd3df905afa3cba5e822d986383597e845746090fae6d1d621079
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/redis
+    urls:
+    - https://helxplatform.github.io/helm-charts/charts/redis-17.1.2.tgz
+    version: 17.1.2
   redis-insight:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-07T09:55:15.322517-04:00"
+    created: "2023-08-08T14:34:11.989765884Z"
     description: A Helm chart for Kubernetes
     digest: 0a9a48c2ae44a7415affb9354b52a9636ddbd06fd972399da2c1fc2944bb2d95
     name: redis-insight
     type: application
     urls:
-    - https://helxplatform.github.io/helm-charts/redis-insight-0.1.0.tgz
+    - https://helxplatform.github.io/helm-charts/charts/redis-insight-0.1.0.tgz
     version: 0.1.0
   road:
   - apiVersion: v2
@@ -2177,6 +2258,42 @@ entries:
     - https://helxplatform.github.io/helm-charts/road-0.1.0.tgz
     version: 0.1.0
   search:
+  - apiVersion: v2
+    appVersion: 2.10.2
+    created: "2023-08-08T14:34:11.959550115Z"
+    dependencies:
+    - condition: airflow.enabled
+      name: airflow
+      repository: https://airflow-helm.github.io/charts
+      version: 8.6.1
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.16.3
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.1.2
+    - condition: tranql.enabled
+      name: tranql
+      repository: '@helx-charts'
+      version: 0.4.2
+    - condition: redis-insight.enabled
+      name: redis-insight
+      repository: '@helx-charts'
+      version: 0.1.0
+    - condition: ui.enabled
+      name: ui
+      repository: '@helx-charts'
+      version: ^1.0.0
+    description: A Helm chart for Helx Search components. This chart installs Dug,
+      TranQL , Airflow and Redis.
+    digest: 2a0b7dd2c08232a3353c7b94f7a7439e6589639bd8f5c8ee8cae23dbfb1b0b61
+    name: search
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/search-4.0.0.tgz
+    version: 4.0.0
   - apiVersion: v2
     appVersion: 2.9.8
     created: "2023-08-07T09:55:15.824353-04:00"
@@ -2952,7 +3069,7 @@ entries:
   tranql:
   - apiVersion: v2
     appVersion: 0.4.dev2
-    created: "2023-08-07T09:55:15.897342-04:00"
+    created: "2023-08-08T14:34:11.996298045Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -2963,7 +3080,7 @@ entries:
     name: tranql
     type: application
     urls:
-    - https://helxplatform.github.io/helm-charts/tranql-0.4.2.tgz
+    - https://helxplatform.github.io/helm-charts/charts/tranql-0.4.2.tgz
     version: 0.4.2
   - apiVersion: v2
     appVersion: 0.4.dev2
@@ -3084,13 +3201,13 @@ entries:
   ui:
   - apiVersion: v2
     appVersion: 5.0.0
-    created: "2023-08-07T09:55:15.904862-04:00"
+    created: "2023-08-08T14:34:11.997028485Z"
     description: A Helm chart for Kubernetes
     digest: 9cc0dd922a48fdf9810d49c6d0f23b0510af15e6ea531cb03298e9c5acad7261
     name: ui
     type: application
     urls:
-    - https://helxplatform.github.io/helm-charts/ui-1.0.0.tgz
+    - https://helxplatform.github.io/helm-charts/charts/ui-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 2.1.0
@@ -3142,4 +3259,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-07T09:55:13.718507-04:00"
+generated: "2023-08-08T14:34:11.903668429Z"

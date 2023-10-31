@@ -458,7 +458,7 @@ entries:
   helx:
   - apiVersion: v2
     appVersion: 3.3.0
-    created: "2023-10-31T13:43:59.192472017-04:00"
+    created: "2023-10-31T18:01:00.972572523Z"
     dependencies:
     - condition: ambassador.enabled
       name: ambassador
@@ -517,7 +517,7 @@ entries:
       repository: '@helx-charts'
       version: ^1.0.0
     description: A Helm chart for deploying HeLx to Kubernetes.
-    digest: 6b46030ca66099025b50a9567e1e5d3287b653837070a3a8b2bebc64a1d78e8e
+    digest: d0269e63caa7bafb3106fa6f083fa29d0a4abd0dcfac50158ba136eca5eea8e4
     name: helx
     type: application
     urls:
@@ -3489,4 +3489,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-31T13:43:57.690758986-04:00"
+generated: "2023-10-31T18:01:00.88509181Z"

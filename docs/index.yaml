@@ -322,6 +322,16 @@ entries:
     version: 0.3.0-dev
   appstore-sockets:
   - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-04-25T18:34:03.782734876Z"
+    description: A Helm chart for Kubernetes
+    digest: 38514361a76b668ffef2c3904207b3543dee74671a89e9f12a4091b7acef38c0
+    name: appstore-sockets
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/appstore-sockets-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-11-08T16:38:44.977928-05:00"
     description: A Helm chart for Kubernetes
@@ -3835,6 +3845,16 @@ entries:
     version: 0.2-dev
   ui:
   - apiVersion: v2
+    appVersion: 6.2.0
+    created: "2024-04-24T19:20:45.618386804Z"
+    description: A Helm chart for Kubernetes
+    digest: 5cacf7dd3106582705f287eec8bc329e903cadc2aea638d9e294d5368e067534
+    name: ui
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/ui-1.4.0.tgz
+    version: 1.4.0
+  - apiVersion: v2
     appVersion: 6.1.0
     created: "2023-11-15T22:15:14.535410095Z"
     description: A Helm chart for Kubernetes
@@ -3944,4 +3964,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-18T22:14:13.527151009Z"
+generated: "2024-04-25T18:34:03.78197813Z"

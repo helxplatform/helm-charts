@@ -552,6 +552,69 @@ entries:
     version: 1.0.0
   helx:
   - apiVersion: v2
+    appVersion: 3.6.2
+    created: "2024-05-21T18:24:44.825034214Z"
+    dependencies:
+    - condition: ambassador.enabled
+      name: ambassador
+      repository: ""
+      version: ^0.2.0
+    - condition: appstore.enabled
+      name: appstore
+      repository: '@helx-charts'
+      version: ^4.1.5
+    - condition: backup-pvc-cronjob.enabled
+      name: backup-pvc-cronjob
+      repository: ""
+      version: ^0.2.1
+    - condition: image-utils.enabled
+      name: image-utils
+      repository: ""
+      version: ^1.0.0
+    - condition: monitoring.enabled
+      name: monitoring
+      repository: '@helx-charts'
+      version: ^0.2.0
+    - condition: nfs-server.enabled
+      name: nfs-server
+      repository: ""
+      version: ^0.2.0
+    - condition: nfsrods.enabled
+      name: nfsrods
+      repository: ""
+      version: ^2.0.0
+    - condition: nginx.enabled
+      name: nginx
+      repository: ""
+      version: ^1.0.0
+    - condition: pod-reaper.enabled
+      name: pod-reaper
+      repository: ""
+      version: ^0.2.0
+    - condition: resty.enabled
+      name: resty
+      repository: ""
+      version: ^1.0.0
+    - condition: search.enabled
+      name: search
+      repository: '@helx-charts'
+      version: ^2.0.0
+    - condition: ui.enabled
+      name: ui
+      repository: '@helx-charts'
+      version: ^1.4.0
+    - condition: appstore-sockets.enabled
+      name: appstore-sockets
+      repository: '@helx-charts'
+      version: ^2.1.0
+    description: A Helm chart for deploying HeLx to Kubernetes.
+    digest: dd018fed5e9f57a63f99992a649f08b7dcb866a98e05735215986251faf90bd3
+    name: helx
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/helx-4.3.2.tgz
+    version: 4.3.2
+  - apiVersion: v2
     appVersion: 3.6.1
     created: "2024-04-25T20:23:58.908355494Z"
     dependencies:
@@ -4061,4 +4124,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-21T14:33:58.310177314Z"
+generated: "2024-05-21T18:24:44.769103238Z"

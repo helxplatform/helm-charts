@@ -1,9 +1,3 @@
-[submodule "charts/search-api"]
-	path = charts/search-api
-	url = git@github.com:helx-charts/search-api-chart.git
-[submodule "charts/search-ui"]
-	path = charts/search-ui
-	url = git@github.com:helx-charts/search-ui-chart.git
 [submodule "charts/search"]
 	path = charts/search
 	url = git@github.com:helxplatform/search-chart.git

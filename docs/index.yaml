@@ -22,6 +22,21 @@ entries:
   appstore:
   - apiVersion: v2
     appVersion: 4.1.0
+    created: "2024-06-25T12:32:50.292118945Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.26
+    description: A Helm chart for Kubernetes
+    digest: d3d116d7577f87205e67f0a9e5dd088dcc7cc0d095fbd88a4261cb373032bcd5
+    name: appstore
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/appstore-4.1.7.tgz
+    version: 4.1.7
+  - apiVersion: v2
+    appVersion: 4.1.0
     created: "2024-05-30T19:15:38.662758484Z"
     dependencies:
     - condition: postgresql.enabled
@@ -535,6 +550,21 @@ entries:
     - https://helxplatform.github.io/helm-charts/dev-shell-0.1.0.tgz
     version: 0.1.0
   grader-api:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-07-30T19:05:21.164392313Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: ^12.0.0
+    description: A Helm chart to deploy the eduhelx grader API
+    digest: 621e149abe0b7cdfc031a957bbc9fcc519ed62295f8fa3be080a48f60cf69ada
+    name: grader-api
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/grader-api-1.0.3.tgz
+    version: 1.0.3
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2023-11-08T16:38:45.018918-05:00"
@@ -4212,4 +4242,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-30T20:41:12.323410484Z"
+generated: "2024-07-30T19:05:21.159359192Z"

@@ -531,6 +531,16 @@ entries:
   dev-shell:
   - apiVersion: v2
     appVersion: 1.0.1
+    created: "2024-12-04T18:17:37.691225876Z"
+    description: A Helm chart for Kubernetes
+    digest: c6085ff91f941140cc53f1aa14d11a377edb6b9010e0fa5534bbaf0dacdcea8e
+    name: dev-shell
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/dev-shell-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.1
     created: "2023-11-08T16:38:45.007894-05:00"
     description: A Helm chart for Kubernetes
     digest: 234f7ee717f1b6921bba96b48d747ae8847206150046fc40b885c2c9b45aa9b5
@@ -4288,4 +4298,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-28T14:50:55.102422637Z"
+generated: "2024-12-04T18:17:37.690390834Z"

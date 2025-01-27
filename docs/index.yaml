@@ -570,6 +570,21 @@ entries:
     version: 0.1.0
   grader-api:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-01-27T13:48:54.885431193Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: ^12.0.0
+    description: A Helm chart to deploy the eduhelx grader API
+    digest: 4a6ff242414c00ee5b95403651de0574032f015bc5873a2471c816648bb2f77f
+    name: grader-api
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/grader-api-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-07-30T19:05:21.164392313Z"
     dependencies:
@@ -615,6 +630,69 @@ entries:
     - https://helxplatform.github.io/helm-charts/grader-api-1.0.0.tgz
     version: 1.0.0
   helx:
+  - apiVersion: v2
+    appVersion: 3.6.4
+    created: "2025-01-27T16:05:31.980642887Z"
+    dependencies:
+    - condition: ambassador.enabled
+      name: ambassador
+      repository: ""
+      version: ^0.2.0
+    - condition: appstore.enabled
+      name: appstore
+      repository: '@helx-charts'
+      version: ^4.1.6
+    - condition: backup-pvc-cronjob.enabled
+      name: backup-pvc-cronjob
+      repository: ""
+      version: ^0.2.1
+    - condition: image-utils.enabled
+      name: image-utils
+      repository: ""
+      version: ^1.0.0
+    - condition: monitoring.enabled
+      name: monitoring
+      repository: '@helx-charts'
+      version: ^0.2.0
+    - condition: nfs-server.enabled
+      name: nfs-server
+      repository: ""
+      version: ^0.2.0
+    - condition: nfsrods.enabled
+      name: nfsrods
+      repository: ""
+      version: ^2.0.0
+    - condition: nginx.enabled
+      name: nginx
+      repository: ""
+      version: ^1.0.0
+    - condition: pod-reaper.enabled
+      name: pod-reaper
+      repository: ""
+      version: ^0.2.0
+    - condition: resty.enabled
+      name: resty
+      repository: ""
+      version: ^1.0.0
+    - condition: search.enabled
+      name: search
+      repository: '@helx-charts'
+      version: ^2.0.0
+    - condition: ui.enabled
+      name: ui
+      repository: '@helx-charts'
+      version: ^1.5.0
+    - condition: appstore-sockets.enabled
+      name: appstore-sockets
+      repository: '@helx-charts'
+      version: ^2.1.0
+    description: A Helm chart for deploying HeLx to Kubernetes.
+    digest: 4801a4b925648beff1a85b5360ab5522094dd79c8ca46ee6021a6271b2002ce2
+    name: helx
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/helx-4.4.2.tgz
+    version: 4.4.2
   - apiVersion: v2
     appVersion: 3.6.3
     created: "2025-01-07T19:46:35.544591826Z"
@@ -3030,6 +3108,15 @@ entries:
     version: 0.1.0
   resty:
   - apiVersion: v1
+    appVersion: 2.0.1
+    created: "2025-01-27T16:05:31.981080961Z"
+    description: A Helm chart for Kubernetes
+    digest: 74ba11be289e773484ad22e50de5d0aa40eea789e04a0d01e7d089a3cbde07ca
+    name: resty
+    urls:
+    - https://helxplatform.github.io/helm-charts/resty-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v1
     appVersion: 2.0.0
     created: "2024-02-23T15:33:14.906024747Z"
     description: A Helm chart for Kubernetes
@@ -4370,4 +4457,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-07T19:46:35.492795355Z"
+generated: "2025-01-27T16:05:31.92982386Z"

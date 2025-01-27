@@ -570,6 +570,21 @@ entries:
     version: 0.1.0
   grader-api:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-01-27T13:48:54.885431193Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: ^12.0.0
+    description: A Helm chart to deploy the eduhelx grader API
+    digest: 4a6ff242414c00ee5b95403651de0574032f015bc5873a2471c816648bb2f77f
+    name: grader-api
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/grader-api-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2024-07-30T19:05:21.164392313Z"
     dependencies:
@@ -4370,4 +4385,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-07T19:46:35.492795355Z"
+generated: "2025-01-27T13:48:54.880454749Z"

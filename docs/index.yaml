@@ -686,6 +686,69 @@ entries:
   helx:
   - apiVersion: v2
     appVersion: 3.6.4
+    created: "2025-08-19T18:52:20.567279141Z"
+    dependencies:
+    - condition: ambassador.enabled
+      name: ambassador
+      repository: ""
+      version: ^0.2.0
+    - condition: appstore.enabled
+      name: appstore
+      repository: '@helx-charts'
+      version: ^5.0.0
+    - condition: backup-pvc-cronjob.enabled
+      name: backup-pvc-cronjob
+      repository: ""
+      version: ^0.2.1
+    - condition: image-utils.enabled
+      name: image-utils
+      repository: ""
+      version: ^1.0.0
+    - condition: monitoring.enabled
+      name: monitoring
+      repository: '@helx-charts'
+      version: ^0.2.0
+    - condition: nfs-server.enabled
+      name: nfs-server
+      repository: ""
+      version: ^0.2.0
+    - condition: nfsrods.enabled
+      name: nfsrods
+      repository: ""
+      version: ^2.0.0
+    - condition: nginx.enabled
+      name: nginx
+      repository: ""
+      version: ^1.0.0
+    - condition: pod-reaper.enabled
+      name: pod-reaper
+      repository: ""
+      version: ^0.2.0
+    - condition: resty.enabled
+      name: resty
+      repository: ""
+      version: ^1.0.0
+    - condition: search.enabled
+      name: search
+      repository: '@helx-charts'
+      version: ^2.0.0
+    - condition: ui.enabled
+      name: ui
+      repository: '@helx-charts'
+      version: ^1.5.0
+    - condition: appstore-sockets.enabled
+      name: appstore-sockets
+      repository: '@helx-charts'
+      version: ^2.1.0
+    description: A Helm chart for deploying HeLx to Kubernetes.
+    digest: 97117a8095f0ff40ad43e1739eeb3558f63806bfe46c46ba27d9c354f100d76f
+    name: helx
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/helx-4.5.1.tgz
+    version: 4.5.1
+  - apiVersion: v2
+    appVersion: 3.6.4
     created: "2025-07-23T13:24:24.344593363Z"
     dependencies:
     - condition: ambassador.enabled
@@ -4718,4 +4781,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-19T17:48:06.310870433Z"
+generated: "2025-08-19T18:52:20.510896105Z"

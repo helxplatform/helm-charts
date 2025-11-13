@@ -686,6 +686,69 @@ entries:
   helx:
   - apiVersion: v2
     appVersion: 3.6.4
+    created: "2025-11-13T16:09:37.290072126Z"
+    dependencies:
+    - condition: ambassador.enabled
+      name: ambassador
+      repository: ""
+      version: ^0.2.0
+    - condition: appstore.enabled
+      name: appstore
+      repository: '@helx-charts'
+      version: ^5.0.0
+    - condition: backup-pvc-cronjob.enabled
+      name: backup-pvc-cronjob
+      repository: ""
+      version: ^0.2.1
+    - condition: image-utils.enabled
+      name: image-utils
+      repository: ""
+      version: ^1.0.0
+    - condition: monitoring.enabled
+      name: monitoring
+      repository: '@helx-charts'
+      version: ^0.2.0
+    - condition: nfs-server.enabled
+      name: nfs-server
+      repository: ""
+      version: ^0.2.0
+    - condition: nfsrods.enabled
+      name: nfsrods
+      repository: ""
+      version: ^2.0.0
+    - condition: nginx.enabled
+      name: nginx
+      repository: ""
+      version: ^1.0.0
+    - condition: pod-reaper.enabled
+      name: pod-reaper
+      repository: ""
+      version: ^0.2.0
+    - condition: resty.enabled
+      name: resty
+      repository: ""
+      version: ^1.0.0
+    - condition: search.enabled
+      name: search
+      repository: '@helx-charts'
+      version: ^2.0.0
+    - condition: ui.enabled
+      name: ui
+      repository: '@helx-charts'
+      version: ^1.5.0
+    - condition: appstore-sockets.enabled
+      name: appstore-sockets
+      repository: '@helx-charts'
+      version: ^2.1.0
+    description: A Helm chart for deploying HeLx to Kubernetes.
+    digest: 3a74c7e8663cc166c5e60c06fc8ffafe86bc567368318c0a688530f076c8ccba
+    name: helx
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/helx-4.5.2.tgz
+    version: 4.5.2
+  - apiVersion: v2
+    appVersion: 3.6.4
     created: "2025-08-19T18:52:20.567279141Z"
     dependencies:
     - condition: ambassador.enabled
@@ -3227,6 +3290,16 @@ entries:
   pod-reaper:
   - apiVersion: v1
     appVersion: 1.1.2
+    created: "2025-11-13T16:09:37.290534888Z"
+    description: A Helm chart for pod-reaper
+    digest: 26fd60a16951ff73f98ab2eff53b2c43f88ebc94e3dbbeb5615048ef3a87d7d3
+    home: https://github.com/target/pod-reaper
+    name: pod-reaper
+    urls:
+    - https://helxplatform.github.io/helm-charts/pod-reaper-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v1
+    appVersion: 1.1.2
     created: "2023-11-08T16:38:46.577188-05:00"
     description: A Helm chart for pod-reaper
     digest: 5d147e54ab9a960c9b22c2925ff7cb3388c4c6b2dcabdbf0577bc66abc9c620f
@@ -4817,4 +4890,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-12T17:45:26.908374987Z"
+generated: "2025-11-13T16:09:37.236573059Z"

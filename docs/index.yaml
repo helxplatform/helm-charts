@@ -3341,6 +3341,42 @@ entries:
     version: 0.1.0
   search:
   - apiVersion: v2
+    appVersion: v2.13.12
+    created: "2025-11-12T17:45:26.933385584Z"
+    dependencies:
+    - condition: airflow.enabled
+      name: airflow
+      repository: https://airflow.apache.org
+      version: 1.18.0
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 8.5.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.1.1
+    - condition: tranql.enabled
+      name: tranql
+      repository: '@helx-charts'
+      version: 0.4.2
+    - condition: redis-insight.enabled
+      name: redis-insight
+      repository: '@helx-charts'
+      version: 0.1.0
+    - condition: ui.enabled
+      name: ui
+      repository: '@helx-charts'
+      version: ^1.6.0
+    description: A Helm chart for Helx Search components. This chart installs Dug,
+      TranQL , Airflow and Redis.
+    digest: 3374adfb6d0f33364c9fb6c149bdd10815a5dfa9064e719baa4fad0440349b68
+    name: search
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/search-7.0.0.tgz
+    version: 7.0.0
+  - apiVersion: v2
     appVersion: v2.13.9
     created: "2025-04-22T19:43:27.471861262Z"
     dependencies:
@@ -4781,4 +4817,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-19T18:52:20.510896105Z"
+generated: "2025-11-12T17:45:26.908374987Z"

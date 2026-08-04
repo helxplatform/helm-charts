@@ -740,6 +740,69 @@ entries:
   helx:
   - apiVersion: v2
     appVersion: 3.6.5
+    created: "2026-08-04T14:06:46.850358923Z"
+    dependencies:
+    - condition: ambassador.enabled
+      name: ambassador
+      repository: ""
+      version: ^0.2.0
+    - condition: appstore.enabled
+      name: appstore
+      repository: '@helx-charts'
+      version: ^5.1.1
+    - condition: backup-pvc-cronjob.enabled
+      name: backup-pvc-cronjob
+      repository: ""
+      version: ^0.2.1
+    - condition: image-utils.enabled
+      name: image-utils
+      repository: ""
+      version: ^1.0.0
+    - condition: monitoring.enabled
+      name: monitoring
+      repository: '@helx-charts'
+      version: ^0.2.0
+    - condition: nfs-server.enabled
+      name: nfs-server
+      repository: ""
+      version: ^0.2.0
+    - condition: nfsrods.enabled
+      name: nfsrods
+      repository: ""
+      version: ^2.0.0
+    - condition: nginx.enabled
+      name: nginx
+      repository: ""
+      version: ^1.0.0
+    - condition: pod-reaper.enabled
+      name: pod-reaper
+      repository: ""
+      version: ^0.2.0
+    - condition: resty.enabled
+      name: resty
+      repository: ""
+      version: ^1.0.0
+    - condition: search.enabled
+      name: search
+      repository: '@helx-charts'
+      version: ^2.0.0
+    - condition: ui.enabled
+      name: ui
+      repository: '@helx-charts'
+      version: ^1.5.0
+    - condition: appstore-sockets.enabled
+      name: appstore-sockets
+      repository: '@helx-charts'
+      version: ^2.1.0
+    description: A Helm chart for deploying HeLx to Kubernetes.
+    digest: 87575c477cd78111ad8eaca82c590d7cced2c6c2914be16098b418d7ee97da18
+    name: helx
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/helx-4.5.7.tgz
+    version: 4.5.7
+  - apiVersion: v2
+    appVersion: 3.6.5
     created: "2026-08-03T17:43:59.515644657Z"
     dependencies:
     - condition: ambassador.enabled
@@ -3542,6 +3605,15 @@ entries:
   resty:
   - apiVersion: v1
     appVersion: 2.0.1
+    created: "2026-08-04T14:06:46.850855284Z"
+    description: A Helm chart for Kubernetes
+    digest: 4c920c013dd61c1e0a372040353a5a987006ad571ebc8cc332e259ef2404b3ac
+    name: resty
+    urls:
+    - https://helxplatform.github.io/helm-charts/resty-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    appVersion: 2.0.1
     created: "2025-01-27T16:05:31.981080961Z"
     description: A Helm chart for Kubernetes
     digest: 74ba11be289e773484ad22e50de5d0aa40eea789e04a0d01e7d089a3cbde07ca
@@ -5106,4 +5178,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2026-08-03T17:43:59.455406624Z"
+generated: "2026-08-04T14:06:46.795672069Z"

@@ -49,6 +49,21 @@ entries:
   appstore:
   - apiVersion: v2
     appVersion: 4.4.1
+    created: "2026-08-14T19:05:10.156240188Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.26
+    description: A Helm chart for Kubernetes
+    digest: ceac9c81b21563f47abbe83a5aaf6b3e4338643c6d1c76a69e7a1f6485949bfd
+    name: appstore
+    type: application
+    urls:
+    - https://helxplatform.github.io/helm-charts/appstore-5.1.5.tgz
+    version: 5.1.5
+  - apiVersion: v2
+    appVersion: 4.4.1
     created: "2026-07-28T17:03:57.600107814Z"
     dependencies:
     - condition: postgresql.enabled
@@ -5250,4 +5265,4 @@ entries:
     urls:
     - https://helxplatform.github.io/helm-charts/ui-0.1.0.tgz
     version: 0.1.0
-generated: "2026-08-04T19:13:03.915689877Z"
+generated: "2026-08-14T19:05:10.148979185Z"
